@@ -1,0 +1,14 @@
+#main-content {
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    text-align: center;
+    margin-top: 3em;
+}
+
+#my-canvas {
+    background-color: #333;
+}
+
+#output-canvas {
+    background-color: #333;
+}
