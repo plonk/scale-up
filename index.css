@@ -5,10 +5,6 @@
     margin-top: 3em;
 }
 
-#my-canvas {
-    background-color: #333;
-}
-
-#output-canvas {
+canvas {
     background-color: #333;
 }

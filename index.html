@@ -7,23 +7,44 @@
   </head>
   <body>
     <div id="main-content">
-      <div>
-        <button id="recur-btn">Recur</button>
-      </div>
+      <p>
+        このページに画像ファイルをドロップすると拡大処理が行なわれます。
+        <br>出力画像の保存は右クリックからしてください。
+      </p>
+      <p>
+        <label>
+          <input type=checkbox id=defractalize>
+          フラクタルパターン除去
+        </label>
+        <button id="recur-btn" title="出力画像を入力としてもう一度拡大します。">反復適用</button>
+        <select id="sample-menu">
+          <option value="" selected>サンプル画像のロード</option>
+          <option>hiza.png</option>
+          <option>pcgw.png</option>
+        </select><br>
+        <small>
+          <a id="download-link" href="#" download="scale-up.zip" onClick="handleDownload()">
+            アプリをZIPでダウンロード
+          </a>
+        </small>
+      </p>
 
       <div>
-        <canvas id="my-canvas" style="border: solid 2px grey" width="320" height="240">
+        入力画像
+        <canvas id="input-canvas" style="border: solid 2px grey" width="320" height="240">
         </canvas>
       </div>
 
       <div>
-        <canvas id="output-canvas" style="border: solid 2px grey" width="640" height="480">
+        出力画像
+        <canvas id="output-canvas" style="border: solid 2px grey" width="320" height="240">
         </canvas>
       </div>
 
       <br>
       <br>
     </div>
+    <script src="jszip.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
