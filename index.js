@@ -1,6 +1,6 @@
 // 自己ダウンロード
 var files = ["index.html", "jszip.js", "index.js", "index.css", "hiza.png", "pcgw.png"];
-function handleDownload() {
+function handleDownload(ev) {
   var link = document.getElementById("download-link");
   if (!link.href.match(/#$/))
     return;
@@ -18,6 +18,7 @@ function handleDownload() {
         link.click();
       });
   });
+  ev.preventDefault();
 }
 
 function getPixel(imageData, x, y) {
@@ -241,4 +242,6 @@ function fixCheckerPattern(id, x, y) {
             this.selectedIndex = 0;
         }
     });
+
+    document.getElementById("download-link").addEventListener("click", handleDownload);
 })();
